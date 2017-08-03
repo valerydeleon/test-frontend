@@ -1,6 +1,43 @@
+@import 'variables';
+@import 'resolution';
+@import 'mixins';
+
+
 body{
-  background-image: url('/assets/img/iconos/dog.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include bg-img;
+}
+
+.bg-table{
+  @include bg-color;
+}
+
+table{
+  @include tabla;
+}
+
+.weather-icon{
+  margin-top: 1vh;
+  @include responsive-HnW;
+}
+
+.small-icon{
+  @include small-img;
+}
+
+.degrees{
+  margin-top: 2vh;
+  @include responsive-HnW;
+}
+
+.grados{
+  color: $primary-color;
+  font-size: $headers-size;
+}
+
+.btn-submit,a{
+  background-color: $primary-color;
+  color: black;
+  font-size: $text-size;
+  font-weight: 300;
+  margin-top: 0px;
 }
